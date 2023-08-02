@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lemonada:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Koh Santepheap:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=League Gothic:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lusitana:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Literata:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Prociono:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Oleo Script:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mada:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Maitree:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Kosugi Maru:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="desktop-1">
+      <div class="desktop-1-child"></div>
+      <div class="desktop-1-item"></div>
+      <div class="desktop-1-inner"></div>
+      <div class="hi-my-names">
+        Hi, my name’s Ngan. I’m a UI/UX designer form Vietnamese
+      </div>
+      <button class="about-me" autofocus>About me</button>
+      <div class="in-2023-i-container">
+        <p class="in-2023-i">
+          In 2023, I have a final assignment in UI design. And this is the
+          result
+        </p>
+      </div>
+      <div class="first-let-me-container">
+        <p class="in-2023-i">First let me introduce myself...</p>
+        <p class="blank-line5">&nbsp;</p>
+      </div>
+      <b class="introduce4" id="introduceText">Introduce</b>
+      <b class="professional-competence8" id="professionalCompetenceText">
+        <p class="in-2023-i">Professional competence</p>
+      </b>
+      <b class="product8" id="productText">
+        <p class="in-2023-i">Product</p>
+      </b>
+      <b class="contact-for-support-container4" id="contactForSupport">
+        <p class="in-2023-i">Contact for support</p>
+        <p class="in-2023-i">&nbsp;</p>
+      </b>
+      <img class="desktop-1-child1" alt="" src="./public/polygon-1.svg" />
+
+      <img class="desktop-1-child2" alt="" src="./public/polygon-1.svg" />
+
+      <img class="desktop-1-child3" alt="" src="./public/polygon-1.svg" />
+
+      <img class="desktop-1-child4" alt="" src="./public/polygon-1.svg" />
+
+      <img class="desktop-1-child5" alt="" src="./public/layer-1.svg" />
+
+      <div class="image-1"></div>
+      <img
+        class="hinh-anh-dong-powerpoint-hai-h-icon"
+        alt=""
+        src="./public/hinhanhdongpowerpointhaihuocchenvaoslide-1@2x.png"
+      />
+
+      <div class="welcome">Welcome</div>
+      <div class="vincent-design-parent4">
+        <div class="vincent-design7">Vincent design</div>
+        <img class="frame-child6" alt="" src="./public/group-1.svg" />
+      </div>
+      <img class="desktop-1-child6" alt="" src="./public/line-1.svg" />
+
+      <img
+        class="component-2-icon2"
+        alt=""
+        src="./public/component-2.svg"
+        id="component2"
+        data-animate-on-scroll
+      />
+
+      <img class="sline-to-change" alt="" src="./public/sline-to-change.svg" />
+    </div>
+
+    <script>
+      var introduceText = document.getElementById("introduceText");
+      if (introduceText) {
+        introduceText.addEventListener("click", function (e) {
+          window.location.href = "./Desktop3.html";
+        });
+      }
+      
+      var professionalCompetenceText = document.getElementById(
+        "professionalCompetenceText"
+      );
+      if (professionalCompetenceText) {
+        professionalCompetenceText.addEventListener("click", function (e) {
+          window.location.href = "./Desktop4.html";
+        });
+      }
+      
+      var productText = document.getElementById("productText");
+      if (productText) {
+        productText.addEventListener("click", function (e) {
+          window.location.href = "./Desktop6.html";
+        });
+      }
+      
+      var contactForSupport = document.getElementById("contactForSupport");
+      if (contactForSupport) {
+        contactForSupport.addEventListener("click", function (e) {
+          window.location.href = "./Desktop2.html";
+        });
+      }
+      
+      var component2 = document.getElementById("component2");
+      if (component2) {
+        component2.addEventListener("click", function (e) {
+          window.location.href = "./Desktop3.html";
+        });
+      }
+      var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+      var observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting || entry.intersectionRatio > 0) {
+              const targetElement = entry.target;
+              targetElement.classList.add("animate");
+              observer.unobserve(targetElement);
+            }
+          }
+        },
+        {
+          threshold: 0.15,
+        }
+      );
+      
+      for (let i = 0; i < scrollAnimElements.length; i++) {
+        observer.observe(scrollAnimElements[i]);
+      }
+      </script>
+  </body>
+</html>
